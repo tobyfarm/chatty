@@ -3,6 +3,7 @@
 angular.module('chattyApp')
   .controller('MainCtrl', function ( $scope, messageService ) {
     messageService.getMessages().then(function ( response ) {
+      console.log(response.data)
       $scope.messages = response.data.messages;
     });
 
